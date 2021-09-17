@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class MiniPractica : MonoBehaviour
 {
-    //Ejercicio 2b
+    //Ejercicio 2c
 
-    public int myInt = 10;
+    public int myInt = 5;
     
 
     // Start is called before the first frame update
     void Start()
     {
 
-        for (myInt = 0; myInt < 10; myInt++)
+        if (myInt != 10)
         {
-            print(myInt);
+            Debug.Log("es distinto de 5");
         }
+        else if (myInt < 10)
+        {
+            Debug.Log("es menor que 10");
+        }
+        else
+        {
+            Debug.Log("ninguna de las opciones anteriores");
+        }
+
+
+
     }
 
     // Update is called once per frame
