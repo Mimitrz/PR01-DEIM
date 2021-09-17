@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class MiniPractica : MonoBehaviour
 {
-    //Ejercicio 2c
+    //Ejercicio 2d
 
-    public int myInt = 5;
-    
+    public int aleatorio;
+    int fail;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        if (myInt != 10)
+      /* for(int myInt=0; myInt<10; myInt++)
         {
-            Debug.Log("es distinto de 5");
+            aleatorio = Random.Range(0, 10);
+            
         }
-        else if (myInt < 10)
+      */
+       while (aleatorio != 2)
         {
-            Debug.Log("es menor que 10");
+            aleatorio = Random.Range(0, 10);
+        
+            if (aleatorio == 2)
+            {
+                print("ha llegado a:" + aleatorio);
+                print("ha fallado:" + fail);
+            }
+            else
+            {
+                fail++;
+            }
         }
-        else
-        {
-            Debug.Log("ninguna de las opciones anteriores");
-        }
-
-
+       
 
     }
 
