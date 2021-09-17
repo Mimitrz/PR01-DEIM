@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MiniPractica : MonoBehaviour
 {
-    //Ejercicio 2a
+    //Ejercicio 2b
+
     public int myInt = 10;
     
 
@@ -12,19 +13,16 @@ public class MiniPractica : MonoBehaviour
     void Start()
     {
 
-        
-
+        for (myInt = 0; myInt < 10; myInt++)
+        {
+            print(myInt);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (myInt < 20)
-        { 
-            myInt++;
-            print(myInt);
-
-        }
+      
 
     }
 }
