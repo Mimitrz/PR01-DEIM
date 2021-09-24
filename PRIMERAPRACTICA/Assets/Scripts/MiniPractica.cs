@@ -18,6 +18,11 @@ public class MiniPractica : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space)) ;
+        {
+            StartCoroutine("Cronometro");
+        }
+
 
     }
 
@@ -32,7 +37,12 @@ public class MiniPractica : MonoBehaviour
                 StopCoroutine("Cronometro");
             }
         }
+
+
+
     }
+
+
 }
 
 
