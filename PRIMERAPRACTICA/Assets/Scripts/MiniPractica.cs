@@ -5,42 +5,30 @@ using UnityEngine.UI;
 
 public class MiniPractica : MonoBehaviour
 {
-    //Ejercicio 3c
+    //Ejercicio 4b
 
-    [SerializeField] Text MyText;
+    [SerializeField]float speed;
+    Vector3 DestPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Cronometro");
+        
+     
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) ;
-        {
-            StartCoroutine("Cronometro");
-        }
+
+
+        float desplX = Input.GetAxis("Horizontal")* speed;
+        transform.Translate(Vector3.right * desplX * Time.deltaTime);
 
 
     }
 
-    IEnumerator Cronometro()
-    {
-        for (int n = 0; n <= 30; n++)
-        {
-            MyText.text = "Contador: " + n;
-            yield return new WaitForSeconds(1f);
-            if (n == 30)
-            {
-                StopCoroutine("Cronometro");
-            }
-        }
-
-
-
-    }
 
 
 }
