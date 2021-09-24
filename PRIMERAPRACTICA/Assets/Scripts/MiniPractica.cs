@@ -25,6 +25,8 @@ public class MiniPractica : MonoBehaviour
 
         float desplX = Input.GetAxis("Horizontal")* speed;
         transform.Translate(Vector3.right * desplX * Time.deltaTime);
+        float desplY = Input.GetAxis("Vertical") * speed;
+        transform.Translate(Vector3.up * desplY * Time.deltaTime);
 
 
     }
