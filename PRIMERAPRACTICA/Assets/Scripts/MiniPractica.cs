@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class MiniPractica : MonoBehaviour
 {
-    //Ejercicio 3a
-    
+    //Ejercicio 3b
+
+    [SerializeField] int n1;
+    [SerializeField] int n2;
+
+    bool devolver;   //Variable booleana para devolver el resultado
+    int Resultadofinal; 
 
     // Start is called before the first frame update
     void Start()
     {
-        Saludar("Miriam");
+
+        Matematica();
+
     }
 
     // Update is called once per frame
@@ -20,14 +27,30 @@ public class MiniPractica : MonoBehaviour
 
     }
 
-    void Saludar(string nombre)
+    void Matematica()
     {
-        print("Hola "+ nombre);
+
+        Resultadofinal = n1 + n2;  
+        if (Resultadofinal<=5)
+        {
+
+            devolver = true;
+
+        }
+        else
+        {
+            devolver = false;
+        }
+
+        print("El resultado es: " + devolver);
+       
+        return;
+
     }
-   
-   
 
 
 
 
-}
+
+
+    }
